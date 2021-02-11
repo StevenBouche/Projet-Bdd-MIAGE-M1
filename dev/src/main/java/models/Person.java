@@ -15,8 +15,6 @@ public class Person {
     private int place;
     private List<Post> posts;
     private List<String> interestTag;
-    private List<LinkPerson> linksPerson;
-    private List<Feedback> feedbacks;
     private List<Order> orders;
 
     public int getId() {
@@ -105,22 +103,6 @@ public class Person {
 
     public void setInterestTag(List<String> interestTag) {
         this.interestTag = interestTag;
-    }
-
-    public List<LinkPerson> getKnowPerson() {
-        return linksPerson;
-    }
-
-    public void setKnowPerson(List<LinkPerson> knowPerson) {
-        this.linksPerson = knowPerson;
-    }
-
-    public List<Feedback> getFeedbacks() {
-        return feedbacks;
-    }
-
-    public void setFeedbacks(List<Feedback> feedbacks) {
-        this.feedbacks = feedbacks;
     }
 
     public List<Order> getOrders() {

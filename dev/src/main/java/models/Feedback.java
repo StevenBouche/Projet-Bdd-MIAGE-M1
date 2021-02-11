@@ -2,6 +2,7 @@ package models;
 
 public class Feedback {
 
+    private String idPerson;
     private String asinProduct;
     private String content;
 
@@ -21,4 +22,11 @@ public class Feedback {
         this.content = content;
     }
 
+    public String getIdPerson() {
+        return idPerson;
+    }
+
+    public void setIdPerson(String idPerson) {
+        this.idPerson = idPerson;
+    }
 }

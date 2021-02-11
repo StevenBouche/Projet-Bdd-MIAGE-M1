@@ -1,0 +1,33 @@
+
+Parsing to JSON :
+
+	//Armand et steven
+
+	- Personne : Customer/person_0_0.csv
+		- Post : SocialNetwork/post_0_0.csv
+		- Link Post to Personn : SocialNetwork/post_hasCreator_person_0_0.csv
+		- Order : Order/Order.json AND Invoice/invoice.xml
+
+	- Tag : SocialNetwork/post_hasTag_tag_0_0.csv AND SocialNetwork/person_hasInterest_tag_0_0.csv
+		- add IPTAG to person and post
+
+	//Margaux et Lina	
+
+	- Vendor : Vendor/Vendor.csv
+		- Product : Product/Product.csv
+		- link product to vendor : BrandByProduct.csv
+
+	- LinkPerson : SocialNetwork/person_knows_person_0_0.csv
+
+	- Feedback : Feedback/Feedback.csv
+	
+
+
+
+library : csv, xml, json
+
+
+
+
+
+

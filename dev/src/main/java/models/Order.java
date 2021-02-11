@@ -1,11 +1,12 @@
 package models;
 
+import java.util.Date;
 import java.util.List;
 
 public class Order {
     private int id;
     private int personId;
-    private long orderDate;
+    private Date orderDate;
     private float totalPrice;
     private List<OrderLine> lines;
 
@@ -23,14 +24,6 @@ public class Order {
 
     public void setPersonId(int personId) {
         this.personId = personId;
-    }
-
-    public long getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(long orderDate) {
-        this.orderDate = orderDate;
     }
 
     public float getTotalPrice() {

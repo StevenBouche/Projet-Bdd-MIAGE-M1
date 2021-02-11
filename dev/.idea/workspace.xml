@@ -2,19 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c683f6f-4b9a-4f0d-88b8-0d0233f4bafb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dev.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Feedback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/LinkPerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Vendor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/Java.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__com_opencsv_opencsv_4_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__org_apache_commons_commons_text_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_12_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/MongoDBJava.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/MongoDBClient/MongoDBClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/model/Note.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/service/ClientManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/service/DataAccess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/service/VolManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/resources/clients.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ResultParsing/memo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/LinkPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/LinkPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/OrderLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/OrderLine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Product.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +50,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1mINJeM1oGux9tccgpPrr8uyJuN" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -61,12 +82,15 @@
       <option name="presentableId" value="Default" />
       <updated>1609177074325</updated>
       <workItem from="1609177077983" duration="2158000" />
-      <workItem from="1613057305956" duration="8481000" />
+      <workItem from="1613057305956" duration="11344000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613066629289">
