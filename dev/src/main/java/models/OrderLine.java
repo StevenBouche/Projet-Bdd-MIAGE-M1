@@ -8,6 +8,7 @@ public class OrderLine {
     private String title;
     private String brand;
 
+
     public int getProductId() {
         return productId;
     }

@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 public class Post {
 
     private int id;
@@ -8,6 +10,7 @@ public class Post {
     private String browserUsed;
     private String content;
     private int length;
+    private List<String> tags;
 
     public int getId() {
         return id;
@@ -55,6 +58,14 @@ public class Post {
 
     public void setLength(int length) {
         this.length = length;
+    }
+
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
     }
 
 }

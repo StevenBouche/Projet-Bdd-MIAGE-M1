@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c683f6f-4b9a-4f0d-88b8-0d0233f4bafb" name="Default Changelist" comment="" />
+    <list default="true" id="9c683f6f-4b9a-4f0d-88b8-0d0233f4bafb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dev.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Feedback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/LinkPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/OrderLine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/OrderLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Tag.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +28,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1mINJeM1oGux9tccgpPrr8uyJuN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -22,8 +40,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="models" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -36,10 +61,17 @@
       <option name="presentableId" value="Default" />
       <updated>1609177074325</updated>
       <workItem from="1609177077983" duration="2158000" />
+      <workItem from="1613057305956" duration="8481000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613066629289">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1613066629289" />
   </component>
 </project>
