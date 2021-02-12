@@ -8,6 +8,7 @@ public class Post {
     private long createDate;
     private String location;
     private String browserUsed;
+    private String language;
     private String content;
     private int length;
     private List<String> tags;
@@ -68,4 +69,11 @@ public class Post {
         this.tags = tags;
     }
 
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
 }

@@ -2,37 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c683f6f-4b9a-4f0d-88b8-0d0233f4bafb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/Java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__com_opencsv_opencsv_4_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__org_apache_commons_commons_text_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/libraries/Maven__org_mongodb_mongo_java_driver_3_12_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/MongoDBJava.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/MongoDBClient/MongoDBClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/model/Note.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/service/ClientManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/service/DataAccess.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/java/service/VolManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exemple/Java_Mongo_Bouche_Steven/Java/MongoDBJava/src/main/resources/clients.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ResultParsing/memo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/DataAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dev.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/090a91c3f6e5849535b7ace690f10cb3fb16d89a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/479de81afd9a8cc58e5275bb43b6459a4e7d8f3b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6c7ce752074a77050cbddbd8771897e5e34938bf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e90eff7e0e6a3f372c6521c807dd91cf6443373" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/9341fb1a72daf3bbdfa72f0c58be7ccfb91342f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Feedback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/LinkPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/LinkPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Post.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +51,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -82,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609177074325</updated>
       <workItem from="1609177077983" duration="2158000" />
-      <workItem from="1613057305956" duration="11344000" />
+      <workItem from="1613057305956" duration="14197000" />
     </task>
     <servers />
   </component>
@@ -93,9 +82,13 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613066629289">
+    <state x="872" y="363" key="#Project_Structure" timestamp="1613119170235">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1613066629289" />
+    <state x="872" y="363" key="#Project_Structure/0.0.2560.1410@0.0.2560.1410" timestamp="1613119170235" />
+    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613119063622">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1613119063622" />
   </component>
 </project>

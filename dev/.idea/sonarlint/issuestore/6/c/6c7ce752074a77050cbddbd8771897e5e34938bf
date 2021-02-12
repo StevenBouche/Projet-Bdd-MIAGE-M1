@@ -1,12 +1,0 @@
-
-K
-java:S1068
-".Remove this unused "totalPrice" private field.(Òğ·8†ÔùÓê.
-F
-java:S1068")Remove this unused "lines" private field.(Éûª8ê»ûÓê.
-H
-java:S1068"&Remove this unused "id" private field.(ôç¼Óşÿÿÿÿ8†ÔùÓê.
-I
-java:S1068",Remove this unused "personId" private field.(€›™¦8†ÔùÓê.
-O
-java:S1068	"-Remove this unused "orderDate" private field.(ÿíî€şÿÿÿÿ8†ÔùÓê.
