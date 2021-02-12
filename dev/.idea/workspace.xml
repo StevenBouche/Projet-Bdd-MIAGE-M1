@@ -2,23 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c683f6f-4b9a-4f0d-88b8-0d0233f4bafb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/DataAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dev.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/090a91c3f6e5849535b7ace690f10cb3fb16d89a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/479de81afd9a8cc58e5275bb43b6459a4e7d8f3b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6c7ce752074a77050cbddbd8771897e5e34938bf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7e90eff7e0e6a3f372c6521c807dd91cf6443373" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/9341fb1a72daf3bbdfa72f0c58be7ccfb91342f3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parser/Parser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parser/PostParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DataAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DataAccess.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +39,33 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.17625" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\BDD\M1-MIAGE-PROJECT-BDD\dev\src\main\resources" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="models" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="dev" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -71,7 +78,8 @@
       <option name="presentableId" value="Default" />
       <updated>1609177074325</updated>
       <workItem from="1609177077983" duration="2158000" />
-      <workItem from="1613057305956" duration="14197000" />
+      <workItem from="1613057305956" duration="14909000" />
+      <workItem from="1613120248477" duration="2117000" />
     </task>
     <servers />
   </component>
@@ -82,13 +90,75 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="872" y="363" key="#Project_Structure" timestamp="1613119170235">
+    <state x="872" y="363" key="#Project_Structure" timestamp="1613120181907">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="872" y="363" key="#Project_Structure/0.0.2560.1410@0.0.2560.1410" timestamp="1613119170235" />
-    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613119063622">
+    <state x="872" y="363" key="#Project_Structure/0.0.2560.1410@0.0.2560.1410" timestamp="1613120181907" />
+    <state x="1085" y="414" key="#com.intellij.ide.util.MemberChooser" timestamp="1613121291561">
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
-    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1613119063622" />
+    <state x="1085" y="414" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1410@0.0.2560.1410" timestamp="1613121291561" />
+    <state x="1128" y="594" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1613120279730">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="1128" y="594" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1613120279730" />
+    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613120846147">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1613120846147" />
+    <state width="401" height="466" key="DebuggerActiveHint" timestamp="1613120665335">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="401" height="466" key="DebuggerActiveHint/0.0.2560.1410@0.0.2560.1410" timestamp="1613120665335" />
+    <state width="2517" height="495" key="GridCell.Tab.0.bottom" timestamp="1613122380929">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="495" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1613122380929" />
+    <state width="2517" height="495" key="GridCell.Tab.0.center" timestamp="1613122380929">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="495" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1613122380929" />
+    <state width="2517" height="495" key="GridCell.Tab.0.left" timestamp="1613122380929">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="495" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1613122380929" />
+    <state width="2517" height="495" key="GridCell.Tab.0.right" timestamp="1613122380929">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="2517" height="495" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1613122380929" />
+    <state width="1234" height="495" key="GridCell.Tab.1.bottom" timestamp="1613122380743">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1234" height="495" key="GridCell.Tab.1.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1613122380743" />
+    <state width="1234" height="495" key="GridCell.Tab.1.center" timestamp="1613122380743">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1234" height="495" key="GridCell.Tab.1.center/0.0.2560.1410@0.0.2560.1410" timestamp="1613122380743" />
+    <state width="1234" height="495" key="GridCell.Tab.1.left" timestamp="1613122380743">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1234" height="495" key="GridCell.Tab.1.left/0.0.2560.1410@0.0.2560.1410" timestamp="1613122380743" />
+    <state width="1234" height="495" key="GridCell.Tab.1.right" timestamp="1613122380743">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state width="1234" height="495" key="GridCell.Tab.1.right/0.0.2560.1410@0.0.2560.1410" timestamp="1613122380743" />
+    <state x="141" y="351" key="SettingsEditor" timestamp="1613120600929">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="141" y="351" key="SettingsEditor/0.0.2560.1410@0.0.2560.1410" timestamp="1613120600929" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/dev$Main.ic" NAME="Main Coverage Results" MODIFIED="1613120608639" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

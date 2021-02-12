@@ -4,30 +4,14 @@ import java.util.List;
 
 public class Post {
 
-    private int id;
-    private long createDate;
+    private String id;
+    private String createDate;
     private String location;
     private String browserUsed;
     private String language;
     private String content;
-    private int length;
+    private String length;
     private List<String> tags;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public long getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(long createDate) {
-        this.createDate = createDate;
-    }
 
     public String getLocation() {
         return location;
@@ -53,14 +37,6 @@ public class Post {
         this.content = content;
     }
 
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
     public List<String> getTags() {
         return tags;
     }
@@ -75,5 +51,29 @@ public class Post {
 
     public void setLanguage(String language) {
         this.language = language;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getLength() {
+        return length;
+    }
+
+    public void setLength(String length) {
+        this.length = length;
     }
 }

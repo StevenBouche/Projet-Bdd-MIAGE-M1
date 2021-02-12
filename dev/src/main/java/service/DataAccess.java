@@ -14,6 +14,9 @@ import java.util.*;
 
 public class DataAccess {
 
+    private Map<Integer,String> parsingPost = new HashMap<>();
+
+
     private Map<Integer,String> parsing = new HashMap<>();
     private Map<Integer,String> parsingAdresse = new HashMap<>();
 
@@ -22,20 +25,7 @@ public class DataAccess {
     }
 
     private void initMap() {
-
-        parsing.put(0,"_id");
-        parsing.put(1,"nom");
-        parsing.put(2,"prenom");
-        parsing.put(3,"telephone");
-        parsing.put(4,"DateNaiss");
-        parsing.put(5,"adresse");
-
-        parsingAdresse = new HashMap<>();
-        parsingAdresse.put(0, "numero");
-        parsingAdresse.put(1, "rue");
-        parsingAdresse.put(2, "codePostal");
-        parsingAdresse.put(3, "ville");
-        parsingAdresse.put(4, "pays");
+       // id|imageFile|creationDate|locationIP|browserUsed|language|content|length
 
     }
 
@@ -47,12 +37,12 @@ public class DataAccess {
                 .collect(Collectors.toList());
     }*/
 
-    public List<String[]> getDataCSV() throws URISyntaxException, IOException {
+    public List<String[]> getDataCSV(String nameFile, char separator) throws URISyntaxException, IOException {
 
-        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource("clients.csv").toURI()));
+        Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource(nameFile).toURI()));
 
         CSVParser parser = new CSVParserBuilder()
-                .withSeparator(',')
+                .withSeparator(separator)
                 .withIgnoreQuotations(true)
                 .build();
 
