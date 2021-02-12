@@ -14,6 +14,10 @@ public class Post {
     private String length;
     private List<String> tags = new ArrayList<>();
 
+    public Post(){
+
+    }
+
     public String getLocation() {
         return location;
     }

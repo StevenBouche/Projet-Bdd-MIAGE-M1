@@ -1,5 +1,7 @@
 package models;
 
+import com.marklogic.client.pojo.annotation.Id;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +19,19 @@ public class Person {
     private List<Post> posts = new ArrayList<>();
     private List<String> interestTag  = new ArrayList<>();
     private List<Order> orders  = new ArrayList<>();
+
+    public Person(){
+
+    }
+
+    @Id
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -106,11 +121,4 @@ public class Person {
         this.createDate = createDate;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 }
