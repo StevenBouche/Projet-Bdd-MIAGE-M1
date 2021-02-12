@@ -1,29 +1,22 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
 
-    private int id;
+    private String id;
     private String firstName;
     private String lastName;
     private String gender;
-    private long birthday;
-    private long createDate;
+    private String birthday;
+    private String createDate;
     private String location;
     private String browserUsed;
     private int place;
-    private List<Post> posts;
-    private List<String> interestTag;
-    private List<Order> orders;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private List<Post> posts = new ArrayList<>();
+    private List<String> interestTag  = new ArrayList<>();
+    private List<Order> orders  = new ArrayList<>();
 
     public String getFirstName() {
         return firstName;
@@ -47,22 +40,6 @@ public class Person {
 
     public void setGender(String gender) {
         this.gender = gender;
-    }
-
-    public long getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(long birthday) {
-        this.birthday = birthday;
-    }
-
-    public long getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(long createDate) {
-        this.createDate = createDate;
     }
 
     public String getLocation() {
@@ -111,5 +88,29 @@ public class Person {
 
     public void setOrders(List<Order> orders) {
         this.orders = orders;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(String createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

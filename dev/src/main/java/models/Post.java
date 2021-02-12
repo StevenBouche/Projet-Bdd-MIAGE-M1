@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Post {
@@ -11,7 +12,7 @@ public class Post {
     private String language;
     private String content;
     private String length;
-    private List<String> tags;
+    private List<String> tags = new ArrayList<>();
 
     public String getLocation() {
         return location;

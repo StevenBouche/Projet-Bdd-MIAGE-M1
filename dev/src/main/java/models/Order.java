@@ -1,5 +1,6 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -9,12 +10,11 @@ public class Order {
     private String personId;
     private String orderDate;
     private double totalPrice;
-    private List<OrderLine> lines;
+    private List<OrderLine> lines = new ArrayList<>();
 
     public Order(){
 
     }
-
 
     public String getId() {
         return id;

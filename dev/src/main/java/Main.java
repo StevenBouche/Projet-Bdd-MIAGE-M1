@@ -1,30 +1,18 @@
-import com.fasterxml.jackson.databind.ObjectMapper;
-import models.Order;
-import models.Post;
-import org.json.JSONArray;
-import org.json.JSONObject;
-import parser.OrderParserXML;
-import parser.PostParser;
-import service.DataAccess;
-
+import models.Person;
+import org.json.simple.parser.ParseException;
+import service.PersonManager;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
 
 public class Main {
 
-    public static void main(String[] args) throws IOException, URISyntaxException {
+    public static void main(String[] args) throws IOException, URISyntaxException, ParseException, InterruptedException {
 
-        DataAccess access = new DataAccess();
-       /* List<String[]> postsStr = access.getDataCSV("post_0_0.csv",'|');
-        PostParser postParser = new PostParser(postsStr);
-        List<Post> posts = postParser.getDataParse();
-        System.out.print("test");*/
+        PersonManager manager = new PersonManager();
+        List<Person> persons = manager.getPersons();
 
-        JSONObject json = access.getDataXMLToJSON("Invoice.xml");
-
-        OrderParserXML orderXML = new OrderParserXML(json);
-        List<Order> orders = orderXML.getDataParse();
+        System.out.println("Finish");
 
     }
 

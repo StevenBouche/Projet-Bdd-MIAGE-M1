@@ -1,10 +1,9 @@
 package models;
 
 public class OrderLine {
-    private String productId;
+    private int productId;
     private String asin;
-    private String price;
-    private String quantity;
+    private double price;
     private String title;
     private String brand;
 
@@ -28,14 +27,6 @@ public class OrderLine {
         this.brand = brand;
     }
 
-    public String getProductId() {
-        return productId;
-    }
-
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
-
     public String getAsin() {
         return asin;
     }
@@ -44,19 +35,19 @@ public class OrderLine {
         this.asin = asin;
     }
 
-    public String getPrice() {
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
+
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(double price) {
         this.price = price;
-    }
-
-    public String getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(String quantity) {
-        this.quantity = quantity;
     }
 }
