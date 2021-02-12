@@ -4,33 +4,55 @@ import java.util.Date;
 import java.util.List;
 
 public class Order {
-    private int id;
-    private int personId;
-    private Date orderDate;
-    private float totalPrice;
+
+    private String id;
+    private String personId;
+    private String orderDate;
+    private double totalPrice;
     private List<OrderLine> lines;
 
-    public int getId() {
+    public Order(){
+
+    }
+
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public int getPersonId() {
+    public String getPersonId() {
         return personId;
     }
 
-    public void setPersonId(int personId) {
+    public void setPersonId(String personId) {
         this.personId = personId;
     }
 
-    public float getTotalPrice() {
+    public String getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public List<OrderLine> getLines() {
+        return lines;
+    }
+
+    public void setLines(List<OrderLine> lines) {
+        this.lines = lines;
+    }
+
+    public double getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(float totalPrice) {
+    public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
 }

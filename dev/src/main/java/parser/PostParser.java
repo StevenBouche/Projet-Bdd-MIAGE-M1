@@ -6,22 +6,10 @@ import models.Post;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PostParser extends Parser<Post> {
+public class PostParser extends Parser<List<String[]>,Post> {
 
     public PostParser(List<String[]> data) {
         super(data);
-    }
-
-    @Override
-    public void setupParsingMap() {
-        parsingMap.put(0,"id");
-        parsingMap.put(1,"imageFile");
-        parsingMap.put(2,"creationDate");
-        parsingMap.put(3,"locationIP");
-        parsingMap.put(4,"browserUsed");
-        parsingMap.put(5,"language");
-        parsingMap.put(6,"content");
-        parsingMap.put(7,"length");
     }
 
     @Override
@@ -41,6 +29,5 @@ public class PostParser extends Parser<Post> {
         }
         return posts;
     }
-
 
 }

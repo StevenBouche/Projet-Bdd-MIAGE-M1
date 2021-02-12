@@ -1,9 +1,14 @@
 package service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
+import models.Order;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.XML;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -57,6 +62,12 @@ public class DataAccess {
 
         return list;
     }
+
+    public JSONObject getDataXMLToJSON(String nameFile) throws URISyntaxException, IOException {
+        String str = Files.readString(Paths.get(ClassLoader.getSystemResource(nameFile).toURI()));
+        return XML.toJSONObject(str);
+    }
+
 /*
     public Document parsingCSV(String[] strings) {
 
