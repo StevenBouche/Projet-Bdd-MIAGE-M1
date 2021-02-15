@@ -5,8 +5,7 @@ import java.net.URISyntaxException;
 import java.util.List;
 
 public class KnowPersonsManager {
-    //    this.postsStr =access.getDataCSV("post_0_0.csv",'|');
-    //     List<String[]> postsStr;
+
     DataAccess access = new DataAccess();
     List<String[]>  linksStr;
 

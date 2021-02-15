@@ -7,7 +7,7 @@ import java.util.List;
 
 public class LinkPersonParser extends Parser<List<String[]>,LinkPerson> {
 
-    public LinkPersonParser(List<String[]> data){
+   public LinkPersonParser(List<String[]> data){
         super(data);
     }
 
