@@ -22,12 +22,10 @@ class VendorManagerTest {
           Vendors();
     }
 
-    DataAccess access = new DataAccess();
-    List<String[]> vendorsStr;
 
     public void Vendors() throws IOException, URISyntaxException{
-        this.vendorsStr = access.getDataCSV("Vendor.csv",',');
-
-        System.out.println(vendorsStr);
+      VendorManager v = new VendorManager();
+      List<Vendor> seller = v.getVendors();
+      System.out.println("TEST");
     }
 }
