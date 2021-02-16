@@ -1,11 +1,14 @@
 package models;
 
+import com.marklogic.client.pojo.annotation.Id;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Vendor {
 
     private String id;
+    private String title;
     private List<Product> products = new ArrayList<>();
     private List<AdressVendor> adresses = new ArrayList<>();
 
@@ -13,11 +16,12 @@ public class Vendor {
 
     }
 
-    public String getTitle() {
+    @Id
+    public String getId() {
         return id;
     }
 
-    public void setTitle(String id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -35,5 +39,13 @@ public class Vendor {
 
     public void setAdresses(List<AdressVendor> adresses) {
         this.adresses = adresses;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

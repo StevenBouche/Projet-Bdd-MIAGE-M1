@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
@@ -61,6 +62,7 @@ public class VendorParserManager {
         if(!vendors.isEmpty()||vendorsStr.isEmpty()) return vendors;
 
         Map<String,Vendor> mapVendor = new HashMap<>();
+        AtomicInteger i = new AtomicInteger(1);
 
         this.vendorsStr.forEach(vendor ->{
 
@@ -70,7 +72,9 @@ public class VendorParserManager {
             if(mapVendor.containsKey(idVendor)) seller = mapVendor.get(idVendor);
             else {
                 seller = new Vendor();
+                seller.setId(String.valueOf(i.get()));
                 seller.setTitle(vendor[0]);
+                i.getAndIncrement();
                 mapVendor.put(idVendor,seller);
             }
 
