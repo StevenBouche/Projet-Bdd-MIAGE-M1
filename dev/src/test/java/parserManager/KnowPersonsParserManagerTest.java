@@ -26,6 +26,7 @@ class KnowPersonsParserManagerTest {
         KnowPersonsParserManager k = new KnowPersonsParserManager();
         List<LinkPerson> linkPerson = k.getLinksPerson() ;
         System.out.println("TEST");
+
     }
 
 

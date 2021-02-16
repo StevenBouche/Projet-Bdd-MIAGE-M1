@@ -7,6 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+// JAMAIS UTILISEE FINALEMENT
+
 public class LinkPersonParser extends Parser<List<String[]>,LinkPerson> {
 
    public LinkPersonParser(List<String[]> data){

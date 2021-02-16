@@ -18,7 +18,7 @@ public class VendorParser extends  Parser<List<String[]>, Vendor> {
         Vendor vendor;
         for (String[] strs : this.data){
             vendor = new Vendor();
-            vendor.setTitle(strs[0]);
+            vendor.setId(strs[0]);
 
             vendors.add(vendor);
         }

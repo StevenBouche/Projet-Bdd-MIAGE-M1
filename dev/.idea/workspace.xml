@@ -5,8 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c683f6f-4b9a-4f0d-88b8-0d0233f4bafb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CleanDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ExportData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ImportDataToDatase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Queries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/parserManager/FeedBackParserManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/MarkLogicManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/parserManager/KnowPersonsParserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parserManager/KnowPersonsParserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dal/MarkLogicUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dal/MarkLogicUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/AdressVendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/AdressVendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Feedback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Feedback.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/LinkPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/LinkPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/LinkPersonToTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/LinkPersonToTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/LinkPostToPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/LinkPostToPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/LinkPostToTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/LinkPostToTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Vendor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/LinkPersonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/LinkPersonParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/LinkPersonParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parserManager/FeedBackParserManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parser/VendorParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parser/VendorParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parserManager/PersonParserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parserManager/PersonParserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parserManager/VendorParserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parserManager/VendorParserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/PersonManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PersonManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/parserManager/KnowPersonsParserManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parserManager/KnowPersonsParserManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +39,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -58,6 +80,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="parserManager" />
       <recent name="service" />
       <recent name="parser" />
     </key>
@@ -196,7 +219,7 @@
       <workItem from="1613324386270" duration="7331000" />
       <workItem from="1613405012376" duration="6042000" />
       <workItem from="1613470455379" duration="799000" />
-      <workItem from="1613471273545" duration="8751000" />
+      <workItem from="1613471273545" duration="10450000" />
     </task>
     <task id="LOCAL-00001" summary="Pas fini LinkPerson">
       <created>1613162246285</created>
@@ -226,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613411378640</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Linkperson">
+      <created>1613501119911</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613501119911</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +268,8 @@
     <MESSAGE value="Continuation linkpersonparser knowpersonmanager etc..." />
     <MESSAGE value="Vendor (pas fini)" />
     <MESSAGE value="vendor : vendor.csv, product.csv, brandbyproduct.csv" />
-    <option name="LAST_COMMIT_MESSAGE" value="vendor : vendor.csv, product.csv, brandbyproduct.csv" />
+    <MESSAGE value="Linkperson" />
+    <option name="LAST_COMMIT_MESSAGE" value="Linkperson" />
   </component>
   <component name="WindowStateProjectService">
     <state x="872" y="363" key="#Project_Structure" timestamp="1613120181907">
@@ -257,61 +288,61 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="223" y="455" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1613120846147" />
-    <state x="383" y="0" key="CommitChangelistDialog2" timestamp="1613411377289">
+    <state x="383" y="0" key="CommitChangelistDialog2" timestamp="1613501118790">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="383" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613411377289" />
+    <state x="383" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613501118790" />
     <state width="455" height="511" key="DebuggerActiveHint" timestamp="1613409722568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="455" height="511" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1613409722568" />
     <state width="487" height="466" key="DebuggerActiveHint/0.0.2560.1410@0.0.2560.1410" timestamp="1613142139835" />
-    <state width="1478" height="249" key="GridCell.Tab.0.bottom" timestamp="1613500639838">
+    <state width="1478" height="295" key="GridCell.Tab.0.bottom" timestamp="1613501896306">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="249" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
+    <state width="1478" height="295" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613501896306" />
     <state width="1493" height="157" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1613130179334" />
     <state width="2517" height="532" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1613142107150" />
-    <state width="1478" height="249" key="GridCell.Tab.0.center" timestamp="1613500639838">
+    <state width="1478" height="295" key="GridCell.Tab.0.center" timestamp="1613501896306">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="249" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
+    <state width="1478" height="295" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613501896306" />
     <state width="1493" height="157" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1613130179334" />
     <state width="2517" height="532" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1613142107150" />
-    <state width="1478" height="249" key="GridCell.Tab.0.left" timestamp="1613500639838">
+    <state width="1478" height="295" key="GridCell.Tab.0.left" timestamp="1613501896305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="249" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
+    <state width="1478" height="295" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613501896305" />
     <state width="1493" height="157" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1613130179334" />
     <state width="2517" height="532" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1613142107150" />
-    <state width="1478" height="249" key="GridCell.Tab.0.right" timestamp="1613500639838">
+    <state width="1478" height="295" key="GridCell.Tab.0.right" timestamp="1613501896306">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="249" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
+    <state width="1478" height="295" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613501896306" />
     <state width="1493" height="157" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1613130179334" />
     <state width="2517" height="532" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1613142107150" />
-    <state width="1478" height="249" key="GridCell.Tab.1.bottom" timestamp="1613500639839">
+    <state width="1478" height="402" key="GridCell.Tab.1.bottom" timestamp="1613501098712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="249" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613500639839" />
+    <state width="1478" height="402" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613501098712" />
     <state width="1493" height="157" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1613130181583" />
     <state width="2517" height="532" key="GridCell.Tab.1.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1613142127119" />
-    <state width="1478" height="249" key="GridCell.Tab.1.center" timestamp="1613500639839">
+    <state width="1478" height="402" key="GridCell.Tab.1.center" timestamp="1613501098712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="249" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613500639839" />
+    <state width="1478" height="402" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613501098712" />
     <state width="1493" height="157" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1613130181583" />
     <state width="2517" height="532" key="GridCell.Tab.1.center/0.0.2560.1410@0.0.2560.1410" timestamp="1613142127119" />
-    <state width="1478" height="249" key="GridCell.Tab.1.left" timestamp="1613500639838">
+    <state width="1478" height="402" key="GridCell.Tab.1.left" timestamp="1613501098711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="249" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
+    <state width="1478" height="402" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613501098711" />
     <state width="1493" height="157" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1613130181583" />
     <state width="2517" height="532" key="GridCell.Tab.1.left/0.0.2560.1410@0.0.2560.1410" timestamp="1613142127119" />
-    <state width="1478" height="249" key="GridCell.Tab.1.right" timestamp="1613500639839">
+    <state width="1478" height="402" key="GridCell.Tab.1.right" timestamp="1613501098712">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="249" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613500639839" />
+    <state width="1478" height="402" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613501098712" />
     <state width="1493" height="157" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1613130181583" />
     <state width="2517" height="532" key="GridCell.Tab.1.right/0.0.2560.1410@0.0.2560.1410" timestamp="1613142127119" />
     <state x="457" y="135" key="Maven.ArtifactSearchDialog" timestamp="1613315103956">
@@ -323,10 +354,10 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="141" y="351" key="SettingsEditor/0.0.2560.1410@0.0.2560.1410" timestamp="1613120600929" />
-    <state x="540" y="226" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1613382112877">
+    <state x="540" y="226" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1613501987522">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="540" y="226" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1613382112877" />
+    <state x="540" y="226" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1613501987522" />
     <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1613153405219">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -339,11 +370,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/parserManager/VendorParserManagerTest.java</url>
           <line>28</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/parserManager/KnowPersonsParserManagerTest.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

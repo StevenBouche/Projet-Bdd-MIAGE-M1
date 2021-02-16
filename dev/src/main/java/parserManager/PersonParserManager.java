@@ -78,7 +78,7 @@ public class PersonParserManager {
         Map<String, Post> mapPost = posts.stream().collect(Collectors.toMap(Post::getId, p -> p));
 
         //Link tag to post
-        this.getPostTag().parallelStream().forEach(lp -> {
+        this.getPostTag().forEach(lp -> {
             String postId = lp.getPostId();
             if(mapPost.containsKey(postId)){
                 mapPost.get(postId).getTags().add(lp.getTagId());
@@ -86,7 +86,7 @@ public class PersonParserManager {
         });
 
         //Link tag to person
-        this.getPersonTag().parallelStream().forEach(lp -> {
+        this.getPersonTag().forEach(lp -> {
             String personId = lp.getPersonId();
             if(mapPerson.containsKey(personId)){
                 mapPerson.get(personId).getInterestTag().add(lp.getTagId());
@@ -94,7 +94,7 @@ public class PersonParserManager {
         });
 
         //Link order to person
-        orders.parallelStream().forEach(o -> {
+        orders.forEach(o -> {
             String idPerson = o.getPersonId();
             if(mapPerson.containsKey(idPerson)){
                 mapPerson.get(idPerson).getOrders().add(o);
@@ -102,7 +102,7 @@ public class PersonParserManager {
         });
 
         //link post to person
-        links.parallelStream().forEach(l -> {
+        links.forEach(l -> {
             String idPerson = l.getPersonId();
             String idPost = l.getPostId();
             if(mapPerson.containsKey(idPerson)&&mapPost.containsKey(idPost)){

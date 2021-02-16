@@ -5,6 +5,10 @@ public class Tag {
     private int id;
     private String title;
 
+    public Tag(){
+
+    }
+
     public int getId() {
         return id;
     }

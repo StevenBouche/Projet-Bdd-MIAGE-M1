@@ -8,7 +8,11 @@ public class LinkPerson {
     private String idPersonSecondary;
     private long date;
     private String dateStr;
-    
+
+    public LinkPerson(){
+
+    }
+
     public String getIdPersonPrimary() {
         return idPersonPrimary;
     }

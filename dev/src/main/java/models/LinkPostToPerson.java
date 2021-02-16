@@ -5,6 +5,10 @@ public class LinkPostToPerson {
     private String postId;
     private String personId;
 
+    public LinkPostToPerson(){
+
+    }
+
     public String getPostId() {
         return postId;
     }
