@@ -1,13 +1,15 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Vendor {
 
     private String id;
-    private String country;
-    private String industry;
-    private List<Product> products;
+
+    private List<Product> products = new ArrayList<>();
+
+    private List<AdressVendor> adresses = new ArrayList<>();
 
     public String getTitle() {
         return id;
@@ -17,21 +19,6 @@ public class Vendor {
         this.id = id;
     }
 
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public String getIndustry() {
-        return industry;
-    }
-
-    public void setIndustry(String industry) {
-        this.industry = industry;
-    }
 
     public List<Product> getProducts() {
         return products;
@@ -41,4 +28,11 @@ public class Vendor {
         this.products = products;
     }
 
+    public List<AdressVendor> getAdresses() {
+        return adresses;
+    }
+
+    public void setAdresses(List<AdressVendor> adresses) {
+        this.adresses = adresses;
+    }
 }

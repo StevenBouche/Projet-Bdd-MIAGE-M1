@@ -6,7 +6,7 @@ public class LinkPerson {
 
     private String idPersonPrimary;
     private String idPersonSecondary;
-    private Date date;
+    private String date;
     
     public String getIdPersonPrimary() {
         return idPersonPrimary;
@@ -24,11 +24,11 @@ public class LinkPerson {
         this.idPersonSecondary = idPersonSecondary;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
