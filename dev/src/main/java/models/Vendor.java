@@ -6,9 +6,7 @@ import java.util.List;
 public class Vendor {
 
     private String id;
-
     private List<Product> products = new ArrayList<>();
-
     private List<AdressVendor> adresses = new ArrayList<>();
 
     public String getTitle() {
@@ -18,7 +16,6 @@ public class Vendor {
     public void setTitle(String id) {
         this.id = id;
     }
-
 
     public List<Product> getProducts() {
         return products;

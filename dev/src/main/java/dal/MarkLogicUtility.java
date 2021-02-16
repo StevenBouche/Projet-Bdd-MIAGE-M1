@@ -1,4 +1,4 @@
-package service;
+package dal;
 
 import com.marklogic.client.DatabaseClient;
 import com.marklogic.client.DatabaseClientFactory;

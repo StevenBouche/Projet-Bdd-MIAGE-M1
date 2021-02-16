@@ -6,7 +6,8 @@ public class LinkPerson {
 
     private String idPersonPrimary;
     private String idPersonSecondary;
-    private String date;
+    private long date;
+    private String dateStr;
     
     public String getIdPersonPrimary() {
         return idPersonPrimary;
@@ -24,12 +25,20 @@ public class LinkPerson {
         this.idPersonSecondary = idPersonSecondary;
     }
 
-    public String getDate() {
+
+    public long getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(long date) {
         this.date = date;
     }
 
+    public String getDateStr() {
+        return dateStr;
+    }
+
+    public void setDateStr(String dateStr) {
+        this.dateStr = dateStr;
+    }
 }

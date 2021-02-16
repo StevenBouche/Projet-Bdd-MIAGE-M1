@@ -6,6 +6,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +25,7 @@ public class OrderParser extends Parser<JSONArray, Order> {
 
         List<JSONObject> jsonObject = new ArrayList<>();
         ArrayList<Order> orders = new ArrayList<>();
+        DateTimeFormatter format =  DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
         for (int i = 0; i < this.data.length(); i++)
             jsonObject.add(this.data.getJSONObject(i));
@@ -37,7 +43,8 @@ public class OrderParser extends Parser<JSONArray, Order> {
 
             o.setId(oid);
             o.setPersonId(pid);
-            o.setOrderDate(odate);
+            o.setOrderDateStr(odate);
+            o.setOrderDate(LocalDate.parse(odate,format).atStartOfDay(ZoneOffset.UTC).toEpochSecond());
             o.setTotalPrice(tp);
 
             try{
@@ -69,11 +76,17 @@ public class OrderParser extends Parser<JSONArray, Order> {
         OrderLine line = new OrderLine();
         line.setProductId(obj.getInt("productId"));
         line.setPrice(obj.getDouble("price"));
-        line.setAsin(obj.getString("asin"));
+
+        Object strAsin = obj.get("asin");
+        if(strAsin instanceof String)
+            line.setAsin(obj.getString("asin"));
+        else if(strAsin instanceof Integer)
+            line.setAsin(String.valueOf(obj.getInt("asin")));
+
         line.setBrand(obj.getString("brand"));
 
-        Object str = obj.getString("title");
-        if(str!=null&&str instanceof String) line.setTitle((String)str);
+        Object str = obj.get("title");
+        if(str instanceof String) line.setTitle((String)str);
         else line.setTitle("");
 
         return line;

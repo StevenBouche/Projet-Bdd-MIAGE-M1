@@ -3,7 +3,7 @@ import com.marklogic.client.DatabaseClientFactory;
 import com.marklogic.client.pojo.PojoRepository;
 import models.Person;
 import org.json.simple.parser.ParseException;
-import service.PersonParsingManager;
+import parserManager.PersonParserManager;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -17,7 +17,7 @@ public class Main {
 
         myClassRepo.deleteAll();
 
-        PersonParsingManager manager = new PersonParsingManager();
+        PersonParserManager manager = new PersonParserManager();
         List<Person> persons = manager.getPersons();
 
         for(Person p : persons){

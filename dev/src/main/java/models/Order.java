@@ -8,7 +8,8 @@ public class Order {
 
     private String id;
     private String personId;
-    private String orderDate;
+    private long orderDate;
+    private String orderDateStr;
     private double totalPrice;
     private List<OrderLine> lines = new ArrayList<>();
 
@@ -32,14 +33,6 @@ public class Order {
         this.personId = personId;
     }
 
-    public String getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(String orderDate) {
-        this.orderDate = orderDate;
-    }
-
     public List<OrderLine> getLines() {
         return lines;
     }
@@ -54,5 +47,21 @@ public class Order {
 
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public long getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(long orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public String getOrderDateStr() {
+        return orderDateStr;
+    }
+
+    public void setOrderDateStr(String orderDateStr) {
+        this.orderDateStr = orderDateStr;
     }
 }

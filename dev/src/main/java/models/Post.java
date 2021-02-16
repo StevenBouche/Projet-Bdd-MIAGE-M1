@@ -6,7 +6,8 @@ import java.util.List;
 public class Post {
 
     private String id;
-    private String createDate;
+    private String createDateStr;
+    private long createDate;
     private String location;
     private String browserUsed;
     private String language;
@@ -66,19 +67,27 @@ public class Post {
         this.id = id;
     }
 
-    public String getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(String createDate) {
-        this.createDate = createDate;
-    }
-
     public String getLength() {
         return length;
     }
 
     public void setLength(String length) {
         this.length = length;
+    }
+
+    public long getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(long createDate) {
+        this.createDate = createDate;
+    }
+
+    public String getCreateDateStr() {
+        return createDateStr;
+    }
+
+    public void setCreateDateStr(String createDateStr) {
+        this.createDateStr = createDateStr;
     }
 }

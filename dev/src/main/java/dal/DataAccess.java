@@ -1,4 +1,4 @@
-package service;
+package dal;
 
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
@@ -18,13 +18,13 @@ import java.util.*;
 
 public class DataAccess {
 
-    public List<String[]> getDataCSV(String nameFile, char separator) throws URISyntaxException, IOException {
+    public List<String[]> getDataCSV(String nameFile, char separator, boolean ignoreQuote) throws URISyntaxException, IOException {
 
         Reader reader = Files.newBufferedReader(Paths.get(ClassLoader.getSystemResource(nameFile).toURI()));
 
         CSVParser parser = new CSVParserBuilder()
                 .withSeparator(separator)
-                .withIgnoreQuotations(true)
+                .withIgnoreQuotations(ignoreQuote)
                 .build();
 
         CSVReader csvReader = new CSVReaderBuilder(reader)

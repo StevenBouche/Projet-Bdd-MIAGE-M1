@@ -12,7 +12,8 @@ public class Person {
     private String lastName;
     private String gender;
     private String birthday;
-    private String createDate;
+    private String createDateStr;
+    private long createDate;
     private String location;
     private String browserUsed;
     private int place;
@@ -113,12 +114,19 @@ public class Person {
         this.birthday = birthday;
     }
 
-    public String getCreateDate() {
+    public String getCreateDateStr() {
+        return createDateStr;
+    }
+
+    public void setCreateDateStr(String createDateStr) {
+        this.createDateStr = createDateStr;
+    }
+
+    public long getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(String createDate) {
+    public void setCreateDate(long createDate) {
         this.createDate = createDate;
     }
-
 }

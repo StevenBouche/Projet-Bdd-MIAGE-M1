@@ -1,4 +1,4 @@
-package service;
+package parserManager;
 
 import models.*;
 import org.json.JSONArray;
@@ -8,6 +8,7 @@ import parser.OrderParser;
 import parser.OrderParserXML;
 import parser.PersonParser;
 import parser.PostParser;
+import dal.DataAccess;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -16,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class PersonParsingManager {
+public class PersonParserManager {
 
     DataAccess access = new DataAccess();
 
@@ -31,7 +32,7 @@ public class PersonParsingManager {
 
     List<Person> persons;
 
-    public PersonParsingManager() throws InterruptedException {
+    public PersonParserManager() throws InterruptedException {
 
         List<Runnable> tasks = this.getTasks();
         List<Thread> threads = new ArrayList<>();
@@ -176,7 +177,7 @@ public class PersonParsingManager {
 
         r.add(() -> {
             try {
-                this.postsStr =access.getDataCSV("post_0_0.csv",'|');
+                this.postsStr =access.getDataCSV("post_0_0.csv",'|',true);
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -208,7 +209,7 @@ public class PersonParsingManager {
 
         r.add(() -> {
             try {
-                this.personStr = access.getDataCSV("person_0_0.csv",'|');
+                this.personStr = access.getDataCSV("person_0_0.csv",'|',true);
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -218,7 +219,7 @@ public class PersonParsingManager {
 
         r.add(() -> {
             try {
-                this.linkPostPersonStr = access.getDataCSV("post_hasCreator_person_0_0.csv",'|');
+                this.linkPostPersonStr = access.getDataCSV("post_hasCreator_person_0_0.csv",'|',true);
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -228,7 +229,7 @@ public class PersonParsingManager {
 
         r.add(() -> {
             try {
-                this.linkPersonTagStr = access.getDataCSV("person_hasInterest_tag_0_0.csv",'|');
+                this.linkPersonTagStr = access.getDataCSV("person_hasInterest_tag_0_0.csv",'|',true);
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -238,7 +239,7 @@ public class PersonParsingManager {
 
         r.add(() -> {
             try {
-                this.linkPostTagStr = access.getDataCSV("post_hasTag_tag_0_0.csv",'|');
+                this.linkPostTagStr = access.getDataCSV("post_hasTag_tag_0_0.csv",'|',true);
             } catch (URISyntaxException e) {
                 e.printStackTrace();
             } catch (IOException e) {
