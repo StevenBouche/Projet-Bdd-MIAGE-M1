@@ -5,6 +5,9 @@ public class LinkPersonToTag {
     private String personId;
     private String tagId;
 
+    public LinkPersonToTag(){
+
+    }
 
     public String getPersonId() {
         return personId;

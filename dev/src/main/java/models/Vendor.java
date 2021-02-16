@@ -9,6 +9,10 @@ public class Vendor {
     private List<Product> products = new ArrayList<>();
     private List<AdressVendor> adresses = new ArrayList<>();
 
+    public Vendor(){
+
+    }
+
     public String getTitle() {
         return id;
     }

@@ -9,8 +9,10 @@ buildNumber.properties
 .mvn/timing.properties
 # https://github.com/takari/maven-wrapper#usage-without-binary-jar
 .mvn/wrapper/maven-wrapper.jar
+
 Data_project/
 dev/src/main/resources/
+dev/ResultParsing
 
 # IDEA artifacts and output dirs
 *.iml

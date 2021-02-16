@@ -48,7 +48,6 @@ public class VendorParserManager {
     List<String[]> productsStr;
     List<String[]> vendorsStr;
 
-
     public VendorParserManager() throws IOException, URISyntaxException{
         this.vendorsStr = access.getDataCSV("Vendor.csv",',',true);
         this.productsStr = access.getDataCSV("Product.csv",',',false);

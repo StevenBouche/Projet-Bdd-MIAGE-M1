@@ -9,6 +9,10 @@ public class Product {
     private float price;
     private String imgUrl;
 
+    public Product(){
+
+    }
+
     public String getAsin() {
         return asin;
     }

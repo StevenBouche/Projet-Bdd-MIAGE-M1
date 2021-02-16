@@ -5,6 +5,9 @@ public class LinkPostToTag {
     private String postId;
     private String tagId;
 
+    public LinkPostToTag(){
+
+    }
 
     public String getPostId() {
         return postId;

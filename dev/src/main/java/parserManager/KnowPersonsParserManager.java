@@ -1,6 +1,7 @@
 package parserManager;
 
 import dal.DataAccess;
+import models.LinkPerson;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -15,5 +16,9 @@ public class KnowPersonsParserManager {
     public KnowPersonsParserManager() throws IOException, URISyntaxException {
     this.linksStr = access.getDataCSV("person_knows_person_0_0.csv",'|',true);
 
+    }
+
+    public List<LinkPerson> getLinks() {
+        return null;
     }
 }

@@ -7,6 +7,10 @@ public class Feedback {
     private float note;
     private String comment;
 
+    public Feedback(){
+
+    }
+
     public String getAsinProduct() {
         return asinProduct;
     }

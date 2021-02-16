@@ -5,6 +5,10 @@ public class AdressVendor {
     private String country;
     private String industry;
 
+    public AdressVendor(){
+
+    }
+
     public String getCountry() {
         return country;
     }
