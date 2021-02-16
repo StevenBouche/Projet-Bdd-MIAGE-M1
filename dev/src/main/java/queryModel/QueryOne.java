@@ -1,6 +1,7 @@
 package queryModel;
 
 import models.Feedback;
+import models.Order;
 import models.Post;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +19,12 @@ public class QueryOne {
     private String lastNamePerson;
     private String genderPerson;
     private String birthdayPerson;
-    private String createDatePerson;
     private String locationPerson;
-    private String browserUsedPerson;
     private int placePerson;
+
     private List<Feedback> lastMonthFeedback = new ArrayList<>();
-    private List<Post> lastMonthPost = new ArrayList<>();
+    private List<Post> lastMonthPosts = new ArrayList<>();
+    private List<Order> lastMonthOrders = new ArrayList<>();
     private String mostBuyProductBrand;
     private String mostTagPost;
 
@@ -71,30 +72,6 @@ public class QueryOne {
         this.birthdayPerson = birthdayPerson;
     }
 
-    public String getCreateDatePerson() {
-        return createDatePerson;
-    }
-
-    public void setCreateDatePerson(String createDatePerson) {
-        this.createDatePerson = createDatePerson;
-    }
-
-    public String getLocationPerson() {
-        return locationPerson;
-    }
-
-    public void setLocationPerson(String locationPerson) {
-        this.locationPerson = locationPerson;
-    }
-
-    public String getBrowserUsedPerson() {
-        return browserUsedPerson;
-    }
-
-    public void setBrowserUsedPerson(String browserUsedPerson) {
-        this.browserUsedPerson = browserUsedPerson;
-    }
-
     public int getPlacePerson() {
         return placePerson;
     }
@@ -111,14 +88,6 @@ public class QueryOne {
         this.lastMonthFeedback = lastMonthFeedback;
     }
 
-    public List<Post> getLastMonthPost() {
-        return lastMonthPost;
-    }
-
-    public void setLastMonthPost(List<Post> lastMonthPost) {
-        this.lastMonthPost = lastMonthPost;
-    }
-
     public String getMostBuyProductBrand() {
         return mostBuyProductBrand;
     }
@@ -133,5 +102,29 @@ public class QueryOne {
 
     public void setMostTagPost(String mostTagPost) {
         this.mostTagPost = mostTagPost;
+    }
+
+    public String getLocationPerson() {
+        return locationPerson;
+    }
+
+    public void setLocationPerson(String locationPerson) {
+        this.locationPerson = locationPerson;
+    }
+
+    public List<Post> getLastMonthPosts() {
+        return lastMonthPosts;
+    }
+
+    public void setLastMonthPosts(List<Post> lastMonthPosts) {
+        this.lastMonthPosts = lastMonthPosts;
+    }
+
+    public List<Order> getLastMonthOrders() {
+        return lastMonthOrders;
+    }
+
+    public void setLastMonthOrders(List<Order> lastMonthOrders) {
+        this.lastMonthOrders = lastMonthOrders;
     }
 }
