@@ -16,7 +16,7 @@ dev/src/main/resources/
 *.iml
 *.ipr
 *.iws
-.idea
+dev/.idea/
 out
 test-output
 atlassian-ide-plugin.xml

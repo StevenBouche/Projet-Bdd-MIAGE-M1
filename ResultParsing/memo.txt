@@ -11,17 +11,15 @@ Parsing to JSON :
 	- Tag : SocialNetwork/post_hasTag_tag_0_0.csv AND SocialNetwork/person_hasInterest_tag_0_0.csv
 		- add IPTAG to person and post
 
-	//Margaux et Lina	
+	//Margaux et Lina
+
+	- LinkPerson : SocialNetwork/person_knows_person_0_0.csv	
+
+	- Feedback : Feedback/Feedback.csv
 
 	- Vendor : Vendor/Vendor.csv
 		- Product : Product/Product.csv
 		- link product to vendor : BrandByProduct.csv
-
-	- LinkPerson : SocialNetwork/person_knows_person_0_0.csv
-
-	- Feedback : Feedback/Feedback.csv
-	
-
 
 
 library : csv, xml, json
