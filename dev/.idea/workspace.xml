@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c683f6f-4b9a-4f0d-88b8-0d0233f4bafb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/VendorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/VendorManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parserManager/KnowPersonsParserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parserManager/KnowPersonsParserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/parserManager/KnowPersonsParserManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/parserManager/KnowPersonsParserManagerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,14 +77,7 @@
       <recent name="D:\Cours\M1_MIAGE\BD\M1-MIAGE-PROJECT-BDD\dev\src\main" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.VendorManagerTest.VendorManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="dev" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.KnowPersonsParserManagerTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -95,32 +89,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KnowPersonsManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KnowPersonsParserManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dev" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="service.*" />
+          <option name="PATTERN" value="parserManager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.KnowPersonsManagerTest" />
+      <option name="PACKAGE_NAME" value="parserManager" />
+      <option name="MAIN_CLASS_NAME" value="parserManager.KnowPersonsParserManagerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VendorManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KnowPersonsParserManagerTest.KnowPersonsManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="dev" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="service.*" />
+          <option name="PATTERN" value="parserManager.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="service" />
-      <option name="MAIN_CLASS_NAME" value="service.VendorManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="parserManager" />
+      <option name="MAIN_CLASS_NAME" value="parserManager.KnowPersonsParserManagerTest" />
+      <option name="METHOD_NAME" value="KnowPersonsManager" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -141,12 +136,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VendorParserManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parserManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parserManager" />
+      <option name="MAIN_CLASS_NAME" value="parserManager.VendorParserManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VendorParserManagerTest.VendorManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="parserManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="parserManager" />
+      <option name="MAIN_CLASS_NAME" value="parserManager.VendorParserManagerTest" />
+      <option name="METHOD_NAME" value="VendorManager" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.KnowPersonsParserManagerTest" />
+        <item itemvalue="JUnit.KnowPersonsParserManagerTest.KnowPersonsManager" />
+        <item itemvalue="JUnit.VendorParserManagerTest" />
+        <item itemvalue="JUnit.VendorParserManagerTest.VendorManager" />
         <item itemvalue="JUnit.VendorManagerTest.VendorManager" />
-        <item itemvalue="JUnit.VendorManagerTest" />
-        <item itemvalue="JUnit.KnowPersonsManagerTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +196,7 @@
       <workItem from="1613324386270" duration="7331000" />
       <workItem from="1613405012376" duration="6042000" />
       <workItem from="1613470455379" duration="799000" />
-      <workItem from="1613471273545" duration="1903000" />
+      <workItem from="1613471273545" duration="8751000" />
     </task>
     <task id="LOCAL-00001" summary="Pas fini LinkPerson">
       <created>1613162246285</created>
@@ -239,52 +266,52 @@
     </state>
     <state width="455" height="511" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1613409722568" />
     <state width="487" height="466" key="DebuggerActiveHint/0.0.2560.1410@0.0.2560.1410" timestamp="1613142139835" />
-    <state width="1478" height="288" key="GridCell.Tab.0.bottom" timestamp="1613411730770">
+    <state width="1478" height="249" key="GridCell.Tab.0.bottom" timestamp="1613500639838">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613411730770" />
+    <state width="1478" height="249" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
     <state width="1493" height="157" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1613130179334" />
     <state width="2517" height="532" key="GridCell.Tab.0.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1613142107150" />
-    <state width="1478" height="288" key="GridCell.Tab.0.center" timestamp="1613411730770">
+    <state width="1478" height="249" key="GridCell.Tab.0.center" timestamp="1613500639838">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613411730770" />
+    <state width="1478" height="249" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
     <state width="1493" height="157" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1613130179334" />
     <state width="2517" height="532" key="GridCell.Tab.0.center/0.0.2560.1410@0.0.2560.1410" timestamp="1613142107150" />
-    <state width="1478" height="288" key="GridCell.Tab.0.left" timestamp="1613411730770">
+    <state width="1478" height="249" key="GridCell.Tab.0.left" timestamp="1613500639838">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613411730770" />
+    <state width="1478" height="249" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
     <state width="1493" height="157" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1613130179334" />
     <state width="2517" height="532" key="GridCell.Tab.0.left/0.0.2560.1410@0.0.2560.1410" timestamp="1613142107150" />
-    <state width="1478" height="288" key="GridCell.Tab.0.right" timestamp="1613411730770">
+    <state width="1478" height="249" key="GridCell.Tab.0.right" timestamp="1613500639838">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613411730770" />
+    <state width="1478" height="249" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
     <state width="1493" height="157" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1613130179334" />
     <state width="2517" height="532" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1613142107150" />
-    <state width="1478" height="288" key="GridCell.Tab.1.bottom" timestamp="1613411730770">
+    <state width="1478" height="249" key="GridCell.Tab.1.bottom" timestamp="1613500639839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="288" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613411730770" />
+    <state width="1478" height="249" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613500639839" />
     <state width="1493" height="157" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1613130181583" />
     <state width="2517" height="532" key="GridCell.Tab.1.bottom/0.0.2560.1410@0.0.2560.1410" timestamp="1613142127119" />
-    <state width="1478" height="288" key="GridCell.Tab.1.center" timestamp="1613411730770">
+    <state width="1478" height="249" key="GridCell.Tab.1.center" timestamp="1613500639839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="288" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613411730770" />
+    <state width="1478" height="249" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613500639839" />
     <state width="1493" height="157" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1613130181583" />
     <state width="2517" height="532" key="GridCell.Tab.1.center/0.0.2560.1410@0.0.2560.1410" timestamp="1613142127119" />
-    <state width="1478" height="288" key="GridCell.Tab.1.left" timestamp="1613411730770">
+    <state width="1478" height="249" key="GridCell.Tab.1.left" timestamp="1613500639838">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="288" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613411730770" />
+    <state width="1478" height="249" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613500639838" />
     <state width="1493" height="157" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1613130181583" />
     <state width="2517" height="532" key="GridCell.Tab.1.left/0.0.2560.1410@0.0.2560.1410" timestamp="1613142127119" />
-    <state width="1478" height="288" key="GridCell.Tab.1.right" timestamp="1613411730770">
+    <state width="1478" height="249" key="GridCell.Tab.1.right" timestamp="1613500639839">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="288" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613411730770" />
+    <state width="1478" height="249" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613500639839" />
     <state width="1493" height="157" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1613130181583" />
     <state width="2517" height="532" key="GridCell.Tab.1.right/0.0.2560.1410@0.0.2560.1410" timestamp="1613142127119" />
     <state x="457" y="135" key="Maven.ArtifactSearchDialog" timestamp="1613315103956">
@@ -306,6 +333,20 @@
     <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1613153405219" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/parserManager/VendorParserManagerTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/parserManager/KnowPersonsParserManagerTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.util.HashMap$Node" memberName="value" />
