@@ -18,6 +18,7 @@ public class QueryTwo {
     private long startPeriod;
     private long finishPeriod;
 
-    private List<Person> personWhoHaveMostBuyOrCommentProduct = new ArrayList<>();
+    private List<Person> personWhoHaveCommentOrPostProduct = new ArrayList<>();
+    private List<Person> personWhoHaveBuyProduct = new ArrayList<>();
 
 }

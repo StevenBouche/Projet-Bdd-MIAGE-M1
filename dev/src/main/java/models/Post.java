@@ -13,6 +13,8 @@ public class Post {
     private String language;
     private String content;
     private String length;
+    private String nameProduct;
+    private String commentary;
     private List<String> tags = new ArrayList<>();
 
     public Post(){
@@ -89,5 +91,21 @@ public class Post {
 
     public void setCreateDateStr(String createDateStr) {
         this.createDateStr = createDateStr;
+    }
+
+    public String getNameProduct() {
+        return nameProduct;
+    }
+
+    public void setNameProduct(String nameProduct) {
+        this.nameProduct = nameProduct;
+    }
+
+    public String getCommentary() {
+        return commentary;
+    }
+
+    public void setCommentary(String commentary) {
+        this.commentary = commentary;
     }
 }

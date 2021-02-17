@@ -1,9 +1,12 @@
 package service;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.marklogic.client.io.JacksonHandle;
+import com.marklogic.client.pojo.PojoPage;
+import com.marklogic.client.query.QueryManager;
+import com.marklogic.client.query.StringQueryDefinition;
 import dal.MarkLogicUtility;
-import models.Order;
-import models.Person;
-import models.Post;
+import models.*;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -28,6 +31,8 @@ public class PersonManager extends MarkLogicManager<Person,String> {
 
 
     }
+
+
 
     public List<Post> getPostsLastMonth(Person p) {
 
@@ -62,6 +67,49 @@ public class PersonManager extends MarkLogicManager<Person,String> {
     private LocalDateTime getDateLastMonth(){
         Date date = new Date(System.currentTimeMillis());
         return LocalDateTime.ofInstant(date.toInstant(),ZoneOffset.UTC).minusMonths(1);
+    }
+
+    public String getMostBrandProduct(Person p) {
+
+        Map<String, Integer> occurs = new HashMap<>();
+
+        for(Order o : p.getOrders()){
+            for(OrderLine ol : o.getLines()){
+                String brand = ol.getBrand();
+                if(occurs.containsKey(brand)) occurs.put(brand,occurs.get(brand)+1);
+                else occurs.put(brand,1);
+            }
+        }
+
+        return Collections.max(occurs.entrySet(), Map.Entry.comparingByValue()).getKey();
+
+    }
+
+    public List<Person> getPersonInRelationWithProduct(Product p){
+
+        if(p==null) return null;
+
+        QueryManager queryMgr = this.getNewQueryManager();
+        StringQueryDefinition stringQry = queryMgr.newStringDefinition();
+        stringQry.setCriteria(p.getTitle());
+
+        List<Person> persons = this.readAll(stringQry);
+
+        return persons;
+
+    }
+
+    public List<Person> getPersonWhoHaveBuyProduct(Product p) {
+
+        QueryManager queryMgr = this.getNewQueryManager();
+        StringQueryDefinition stringQry = queryMgr.newStringDefinition();
+        stringQry.setCriteria(p.getTitle());
+
+        PojoPage<Person> vendors = this.repository.search(stringQry,1);
+        System.out.println(vendors.getTotalPages());
+        System.out.println(vendors.getTotalSize());
+
+        return null;
     }
 
 }

@@ -1,5 +1,7 @@
 package parserManager;
 
+import models.LinkPerson;
+import models.Vendor;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import dal.DataAccess;
@@ -20,15 +22,21 @@ class KnowPersonsParserManagerTest {
         KnowPersons();
     }
 
+    public void KnowPersons() throws IOException, URISyntaxException{
+        KnowPersonsParserManager k = new KnowPersonsParserManager();
+        List<LinkPerson> linkPerson = k.getLinksPerson() ;
+        System.out.println("TEST");
+    }
+
+    /*
     List<String[]> linksStr;
     DataAccess access = new DataAccess();
 
     public void KnowPersons() throws IOException, URISyntaxException {
         this.linksStr = access.getDataCSV("person_knows_person_0_0.csv",'|',true);
-
-
         System.out.println(linksStr);
 
-    }
+    } */
+
 
 }

@@ -21,6 +21,7 @@ public class PostParser extends Parser<List<String[]>,Post> {
         List<Post> posts = new ArrayList<>();
         Post p;
         DateTimeFormatter format =  DateTimeFormatter.ofPattern("yyyy-MM-dd['T']HH:mm:ss.SSSX");
+        String startTerm = "About ";
         for(String[] strs : this.data){
             p = new Post();
             p.setId(strs[0]);
@@ -31,7 +32,29 @@ public class PostParser extends Parser<List<String[]>,Post> {
             p.setLength(strs[7]);
             p.setCreateDateStr(strs[2]);
             p.setCreateDate(ZonedDateTime.parse(strs[2],format).toEpochSecond());
+
+
+            String content = p.getContent();
+
+            if(content.length()>0&&content.contains(",")){
+
+                String[] terms = content.split(",",2);
+
+                if(terms.length==2&&terms[0].length()>startTerm.length()){
+
+                    String term = terms[0].substring(0,6);
+
+                    if(term.equals(startTerm)){
+
+                        p.setNameProduct(terms[0].substring(6,terms[0].length()-1));
+                        p.setCommentary(terms[1]);
+
+                    }
+                }
+            }
+
             posts.add(p);
+
         }
         return posts;
     }

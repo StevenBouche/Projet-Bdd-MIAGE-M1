@@ -1,9 +1,10 @@
 package models;
 
-import java.util.Date;
+import com.marklogic.client.pojo.annotation.Id;
 
 public class LinkPerson {
 
+    private String id;
     private String idPersonPrimary;
     private String idPersonSecondary;
     private long date;
@@ -11,6 +12,15 @@ public class LinkPerson {
 
     public LinkPerson(){
 
+    }
+
+    @Id
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getIdPersonPrimary() {
@@ -29,7 +39,6 @@ public class LinkPerson {
         this.idPersonSecondary = idPersonSecondary;
     }
 
-
     public long getDate() {
         return date;
     }
@@ -45,4 +54,5 @@ public class LinkPerson {
     public void setDateStr(String dateStr) {
         this.dateStr = dateStr;
     }
+
 }

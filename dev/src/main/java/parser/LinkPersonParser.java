@@ -7,6 +7,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class LinkPersonParser extends Parser<List<String[]>,LinkPerson> {
 
    public LinkPersonParser(List<String[]> data){
@@ -19,15 +21,19 @@ public class LinkPersonParser extends Parser<List<String[]>,LinkPerson> {
     LinkPerson link;
         DateTimeFormatter format =  DateTimeFormatter.ofPattern("yyyy-MM-dd['T']HH:mm:ss.SSSX");
 
+        int i = 1;
 
-    for(String[] strs : this.data){
-        link = new LinkPerson();
-        link.setIdPersonPrimary(strs[0]);
-        link.setIdPersonSecondary(strs[1]);
-        link.setDateStr(strs[2]) ;
-        link.setDate(ZonedDateTime.parse(strs[2],format).toEpochSecond());
-        links.add(link);
-    }
+        for(String[] strs : this.data){
+            link = new LinkPerson();
+            link.setId(String.valueOf(i));
+            link.setIdPersonPrimary(strs[0]);
+            link.setIdPersonSecondary(strs[1]);
+            link.setDateStr(strs[2]) ;
+            link.setDate(ZonedDateTime.parse(strs[2],format).toEpochSecond());
+            i++;
+            links.add(link);
+        }
+
         return links;
     }
 
