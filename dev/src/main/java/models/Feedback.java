@@ -4,7 +4,7 @@ public class Feedback {
 
     private String idPerson;
     private String asinProduct;
-    private float note;
+    private String note;
     private String comment;
 
     public Feedback(){
@@ -27,13 +27,11 @@ public class Feedback {
         this.idPerson = idPerson;
     }
 
-    public float getNote() {
+    public String getNote() {
         return note;
     }
 
-    public void setNote(float note) {
-        this.note = note;
-    }
+    public void setNote(String note) { this.note = note; }
 
     public String getComment() {
         return comment;
