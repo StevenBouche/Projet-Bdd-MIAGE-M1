@@ -26,7 +26,7 @@ public class FeedbackParser extends Parser<List<String[]>,Feedback> {
             feed.setAsinProduct(strs[1]);
             feed.setNote(strs[2].substring(0,4));
             size = strs[2].length();
-            feed.setComment(strs[2].substring(4,size));
+            feed.setComment(strs[2].substring(5,size));
             i++;
             feeds.add(feed);
         }
