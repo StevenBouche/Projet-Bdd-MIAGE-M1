@@ -8,13 +8,20 @@ import com.marklogic.client.pojo.PojoRepository;
 import com.marklogic.client.query.QueryManager;
 import com.marklogic.client.query.StringQueryDefinition;
 import dal.MarkLogicUtility;
+import models.Order;
 import models.Person;
 import models.Post;
 import models.Vendor;
+import viewModel.NodePerson;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public abstract class MarkLogicManager<T,K extends Serializable> {
 
@@ -26,7 +33,11 @@ public abstract class MarkLogicManager<T,K extends Serializable> {
         this.utility = utility;
         this.repository = utility.createPojoRepository(classT,classK);
         this.query = this.repository.getQueryBuilder();
-        this.repository.setPageLength(100);
+        this.repository.setPageLength(1000);
+    }
+
+    public void release(){
+        this.utility.client.release();
     }
 
     protected QueryManager getNewQueryManager(){
@@ -63,6 +74,43 @@ public abstract class MarkLogicManager<T,K extends Serializable> {
         return persons;
     }
 
+    protected List<T> readAll() throws InterruptedException {
 
+        List<T> elements = new ArrayList<>();
+        int startIndex = 1;
+        long total = this.repository.count();
+        long pageSize = this.repository.getPageLength();
+        List<Thread> threads = new ArrayList<>();
+        Runnable r;
+
+        while(startIndex <= total){
+            long finalStartIndex = startIndex;
+            r = () -> {
+                PojoPage<T> persons = this.repository.readAll(finalStartIndex);
+                while(persons.hasNext()) elements.add(persons.next());
+            };
+            threads.add(new Thread(r));
+            startIndex += pageSize;
+        }
+
+        this.executeTasks(threads);
+
+        return elements;
+
+    }
+
+    protected void executeTasks(List<Thread> threads) throws InterruptedException {
+
+        long startProcessingTime = System.currentTimeMillis();
+
+        for (Thread t: threads) t.start();
+
+        for (Thread t: threads) t.join();
+
+        long totalProcessingTime = System.currentTimeMillis() - startProcessingTime;
+
+        System.out.println("Total time execute tasks : "+totalProcessingTime);
+
+    }
 
 }

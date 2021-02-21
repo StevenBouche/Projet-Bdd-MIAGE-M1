@@ -2,8 +2,10 @@ import dal.MarkLogicUtility;
 import models.*;
 import org.json.simple.parser.ParseException;
 import queryModel.QueryOne;
+import service.LinkPersonManager;
 import service.PersonManager;
 import service.VendorManager;
+import viewModel.NodePerson;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -12,10 +14,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -23,11 +22,21 @@ public class Queries {
 
     static MarkLogicUtility utility = new MarkLogicUtility("localhost",8003, "Admin", "Admin");
     static PersonManager personManager = new PersonManager(utility);
+    static VendorManager vendorManager = new VendorManager(utility);
+    static LinkPersonManager linkManager = new LinkPersonManager(utility);
 
     public static void main(String[] args) throws IOException, URISyntaxException, ParseException, InterruptedException {
 
-       queryOne();
+       queryFour();
 
+
+       finishqueries();
+    }
+
+    private static void finishqueries() {
+        personManager.release();
+        vendorManager.release();
+        linkManager.release();
     }
 
     private static void queryOne() {
@@ -78,8 +87,8 @@ public class Queries {
         long startTime = ZonedDateTime.parse(startDate,format).toEpochSecond();
         long endTime = ZonedDateTime.parse(endDate,format).toEpochSecond();
 
-        VendorManager manager = new VendorManager(utility);
-        Product p = manager.getProductOfVendor(idProduct);
+
+        Product p = vendorManager.getProductOfVendor(idProduct);
         List<Person> persons = personManager.getPersonInRelationWithProduct(p);
 
         List<Person> persons2 = persons.stream().filter(person -> person.getOrders().stream().anyMatch(order -> {
@@ -114,7 +123,7 @@ et renvoyez des phrases de ces textes qui contiennent des sentiments négatifs
 
     }
 
-    private static void queryFour(){
+    private static void queryFour() throws InterruptedException {
 
         /*
         Find the top-2 persons who spend the highest amount of money in orders. Then for
@@ -124,6 +133,33 @@ common friends of these two persons.
 Trouvez les 2 personnes qui dépensent le plus d'argent en commandes.
 Ensuite, pour chaque personne, parcourez son know-graphe avec 3-hop pour trouver les amis, et enfin renvoyer les amis communs de ces deux personnes.
          */
+
+        Map<String,Double> element = personManager.getAverageValueBuyAllPersons();
+
+        Map<String, NodePerson> nodes = linkManager.getGraph();
+
+        List<String> personId = new ArrayList<>(nodes.keySet());
+
+        String idFirst = personId.get(0);
+        String idSecond = personId.get(1);
+
+        //int i, String currentPerson, int currentI, List<String> result, Map<String, NodePerson> nodes
+        List<String> friendsHop1 = new ArrayList<>();
+        List<String> friendsHop2 = new ArrayList<>();
+        linkManager.getFriends(3,idFirst,0,friendsHop1,nodes);
+        linkManager.getFriends(3,idSecond,0,friendsHop2,nodes);
+
+        friendsHop1 = friendsHop1.stream().distinct().collect(Collectors.toList());
+        friendsHop2 = friendsHop2.stream().distinct().collect(Collectors.toList());
+
+        List<String> result = new ArrayList<>();
+        for (String str : friendsHop1) {
+            for(String str2 : friendsHop2){
+                if(str.equals(str2))  result.add(str);
+            }
+        }
+
+        System.out.println("test");
 
     }
 

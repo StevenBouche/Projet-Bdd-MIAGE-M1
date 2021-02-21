@@ -1,10 +1,16 @@
 package service;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.marklogic.client.admin.QueryOptionsManager;
+import com.marklogic.client.document.DocumentPage;
+import com.marklogic.client.document.DocumentRecord;
+import com.marklogic.client.document.GenericDocumentManager;
+import com.marklogic.client.io.Format;
 import com.marklogic.client.io.JacksonHandle;
+import com.marklogic.client.io.StringHandle;
+import com.marklogic.client.io.ValuesHandle;
 import com.marklogic.client.pojo.PojoPage;
-import com.marklogic.client.query.QueryManager;
-import com.marklogic.client.query.StringQueryDefinition;
+import com.marklogic.client.query.*;
 import dal.MarkLogicUtility;
 import models.*;
 
@@ -12,8 +18,19 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+
+
+interface TaskSumOrderPersons {
+    void sumOrderMap(PojoPage<Person> page, Map<String, Double> result);
+}
+
+
+
 
 public class PersonManager extends MarkLogicManager<Person,String> {
 
@@ -31,8 +48,6 @@ public class PersonManager extends MarkLogicManager<Person,String> {
 
 
     }
-
-
 
     public List<Post> getPostsLastMonth(Person p) {
 
@@ -93,23 +108,28 @@ public class PersonManager extends MarkLogicManager<Person,String> {
         StringQueryDefinition stringQry = queryMgr.newStringDefinition();
         stringQry.setCriteria(p.getTitle());
 
-        List<Person> persons = this.readAll(stringQry);
-
-        return persons;
+        return this.readAll(stringQry);
 
     }
 
-    public List<Person> getPersonWhoHaveBuyProduct(Product p) {
+    public Map<String,Double> getAverageValueBuyAllPersons() throws InterruptedException {
 
-        QueryManager queryMgr = this.getNewQueryManager();
-        StringQueryDefinition stringQry = queryMgr.newStringDefinition();
-        stringQry.setCriteria(p.getTitle());
+        Map<String,Double> map = new HashMap<>();
+        List<Person> persons = this.readAll();
 
-        PojoPage<Person> vendors = this.repository.search(stringQry,1);
-        System.out.println(vendors.getTotalPages());
-        System.out.println(vendors.getTotalSize());
+        persons.forEach(person -> {
+            double res = person.getOrders().stream()
+                    .map(Order::getTotalPrice)
+                    .reduce(0.0, Double::sum);
+            map.put(person.getId(),res);
+        });
 
-        return null;
+        return map.entrySet().stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                        (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
     }
+
 
 }
