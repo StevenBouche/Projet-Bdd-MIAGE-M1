@@ -17,6 +17,18 @@ public class Order {
 
     }
 
+    public String toString(){
+
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("Id order : ").append(id).append("\n");
+        builder.append("Date of creation : ").append(orderDateStr).append("\n");
+        builder.append("Price : ").append(totalPrice).append("\n");
+
+        return builder.toString();
+
+    }
+
     public String getId() {
         return id;
     }

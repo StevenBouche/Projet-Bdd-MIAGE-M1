@@ -21,6 +21,19 @@ public class Post {
 
     }
 
+    public String toString(){
+
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("Id product : ").append(id).append("\n");
+        builder.append("Date of creation : ").append(createDateStr).append("\n");
+        builder.append("Name of Product : ").append(nameProduct).append("\n");
+        builder.append("Commentary : ").append(commentary).append("\n");
+
+        return builder.toString();
+
+    }
+
     public String getLocation() {
         return location;
     }

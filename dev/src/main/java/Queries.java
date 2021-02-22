@@ -2,6 +2,9 @@ import dal.MarkLogicUtility;
 import models.*;
 import org.json.simple.parser.ParseException;
 import queryModel.QueryOne;
+import queryModel.QueryThree;
+import queryModel.QueryTwo;
+import service.FeedbackManager;
 import service.LinkPersonManager;
 import service.PersonManager;
 import service.VendorManager;
@@ -24,11 +27,13 @@ public class Queries {
     static PersonManager personManager = new PersonManager(utility);
     static VendorManager vendorManager = new VendorManager(utility);
     static LinkPersonManager linkManager = new LinkPersonManager(utility);
+    static FeedbackManager feedbackManager = new FeedbackManager(utility);
 
     public static void main(String[] args) throws IOException, URISyntaxException, ParseException, InterruptedException {
 
-       queryFour();
-
+        queryOne();
+        queryTwo();
+        queryThree();
 
        finishqueries();
     }
@@ -42,12 +47,16 @@ public class Queries {
     private static void queryOne() {
 
         /*
-            Pour un client donné, retrouvez toutes ses données liées y compris son profil, ses commandes, ses factures, ses retours, commentaires,
-            et les publications du mois dernier, renvoyer la catégorie dans laquelle il / elle a acheté le plus grand nombre de produits,
-            et renvoyer le tag qu'il / elle a engagé les plus grands moments dans les posts.
+
          */
 
-        String idPerson = "10995116284677";
+        System.out.println("QUERY ONE \n");
+
+        System.out.println("Pour un client donné, retrouvez toutes ses données liées y compris son profil, ses commandes, ses factures, ses retours, commentaires,\n" +
+                "et les publications du mois dernier, renvoyer la catégorie dans laquelle il / elle a acheté le plus grand nombre de produits,\n" +
+                "et renvoyer le tag qu'il / elle a engagé les plus grands moments dans les posts.\n");
+
+        String idPerson = "8796093022539";
         QueryOne qone = new QueryOne(idPerson);
 
         Person p = personManager.getPerson(idPerson);
@@ -64,10 +73,7 @@ public class Queries {
         qone.setMostTagPost(personManager.getMostTagPosts(p));
         qone.setMostBuyProductBrand(personManager.getMostBrandProduct(p));
 
-        // TODO FEEDBACK
-
-        System.out.println(qone);
-        System.out.println("test");
+        System.out.println(qone.toString());
 
     }
 
@@ -76,50 +82,64 @@ public class Queries {
 
         /*
             For a given product during a given period, find the people who commented or posted on it, and had bought it.
-
-            Pour un produit donné pendant une période donnée, trouvez les personnes qui ont commenté ou posté dessus, et l'ont acheté.
         */
 
-        String idProduct = "B0007SOLDM";
-        String startDate = "2017-01-01T00:00:00.000+0000";
-        String endDate = "2020-01-01T00:00:00.000+0000";
+        System.out.println("QUERY TWO \n");
+
+        System.out.println("Pour un produit donné pendant une période donnée, trouvez les personnes qui ont commenté ou posté dessus, et l'ont acheté.\n");
+
+        QueryTwo q2 = new QueryTwo();
+
+        q2.asinProduct = "B004H4VSI8";
+        q2.startStr = "2010-01-01T00:00:00.000+0000";
+        q2.endStr = "2030-01-01T00:00:00.000+0000";
+
         DateTimeFormatter format =  DateTimeFormatter.ofPattern("yyyy-MM-dd['T']HH:mm:ss.SSSX");
-        long startTime = ZonedDateTime.parse(startDate,format).toEpochSecond();
-        long endTime = ZonedDateTime.parse(endDate,format).toEpochSecond();
+        q2.startPeriod = ZonedDateTime.parse(q2.startStr,format).toEpochSecond();
+        q2.endPeriod = ZonedDateTime.parse(q2.endStr,format).toEpochSecond();
 
-
-        Product p = vendorManager.getProductOfVendor(idProduct);
+        Product p = vendorManager.getProductOfVendor( q2.asinProduct);
         List<Person> persons = personManager.getPersonInRelationWithProduct(p);
 
-        List<Person> persons2 = persons.stream().filter(person -> person.getOrders().stream().anyMatch(order -> {
-            long date = order.getOrderDate();
-            return startTime <= date && endTime >= date &&
-                    order.getLines().stream().anyMatch(orderLine -> orderLine.getTitle().equals(p.getTitle()));
-        })).collect(Collectors.toList());
+        q2.personWhoHaverPostAndBuyProduct = personManager.getPersonHaveBuyAndPostProduct(q2.startPeriod, q2.endPeriod,  persons, p);
 
-        List<Person> person3 = persons.stream().filter(person -> person.getPosts().stream().anyMatch(post -> {
-            long date = post.getCreateDate();
-            return startTime <= date && endTime >= date;
-        }) || person.getOrders().stream().anyMatch(post -> {
-            long date = post.getOrderDate();
-            return startTime <= date && endTime >= date;
-        })).collect(Collectors.toList());
-
-        //todo verif
-        System.out.println(p);
+        System.out.println(q2);
 
     }
 
-    private static void queryThree(){
+    private static void queryThree() throws InterruptedException {
         /*
         For a given product during a given period, find people who have undertaken
 activities related to it, e.g., posts, comments, and review, and return sentences from these texts
 that contain negative sentiments
 
-Pour un produit donné au cours d'une période donnée, trouvez des personnes qui ont entrepris des
-activités liées à celui-ci, par exemple des publications, des commentaires et des critiques,
-et renvoyez des phrases de ces textes qui contiennent des sentiments négatifs
+
          */
+
+        System.out.println("QUERY Three \n");
+
+        System.out.println("Pour un produit donné au cours d'une période donnée, trouvez des personnes qui ont entrepris des\n" +
+                "activités liées à celui-ci, par exemple des publications, des commentaires et des critiques,\n" +
+                "et renvoyez des phrases de ces textes qui contiennent des sentiments négatifs.\n");
+
+        QueryThree q3 = new QueryThree();
+
+        q3.asinProduct = "B005FUKW6M";
+        q3.startStr = "2010-01-01T00:00:00.000+0000";
+        q3.endStr = "2021-01-01T00:00:00.000+0000";
+
+        DateTimeFormatter format =  DateTimeFormatter.ofPattern("yyyy-MM-dd['T']HH:mm:ss.SSSX");
+        q3.startPeriod = ZonedDateTime.parse(q3.startStr,format).toEpochSecond();
+        q3.endPeriod = ZonedDateTime.parse(q3.endStr,format).toEpochSecond();
+
+        Product p = vendorManager.getProductOfVendor( q3.asinProduct);
+        List<Person> persons = personManager.getPersonInRelationWithProduct(p);
+
+        List<Person> p2 = personManager.getPersonHaveBuyAndPostProduct(q3.startPeriod, q3.endPeriod,  persons, p);
+
+        q3.map = feedbackManager.getFeedbackPersonJoinProduct(p2,p);
+
+        System.out.println(q3);
 
     }
 
@@ -130,9 +150,14 @@ et renvoyez des phrases de ces textes qui contiennent des sentiments négatifs
 each person, traverse her knows-graph with 3-hop to find the friends, and finally return the
 common friends of these two persons.
 
-Trouvez les 2 personnes qui dépensent le plus d'argent en commandes.
-Ensuite, pour chaque personne, parcourez son know-graphe avec 3-hop pour trouver les amis, et enfin renvoyer les amis communs de ces deux personnes.
+Trouvez les 2 personnes qui dépensent le plus d'argent en commandes. Ensuite, pour chaque personne, parcourez son know-graphe avec 3-hop pour trouver les amis, et enfin renvoyer les amis communs de ces deux personnes.
          */
+
+        System.out.println("QUERY Four \n");
+
+        System.out.println("Trouvez les 2 personnes qui dépensent le plus d'argent en commandes. " +
+                "Ensuite, pour chaque personne, parcourez son know-graphe avec 3-hop pour trouver les amis, " +
+                "et enfin renvoyer les amis communs de ces deux personnes.\n");
 
         Map<String,Double> element = personManager.getAverageValueBuyAllPersons();
 

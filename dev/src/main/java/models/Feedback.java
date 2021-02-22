@@ -1,7 +1,11 @@
 package models;
 
+import com.marklogic.client.pojo.annotation.Id;
+
 public class Feedback {
 
+
+    private String id;
     private String idPerson;
     private String asinProduct;
     private String note;
@@ -39,5 +43,14 @@ public class Feedback {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    @Id
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

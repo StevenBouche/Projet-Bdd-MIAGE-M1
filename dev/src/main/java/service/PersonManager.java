@@ -42,13 +42,6 @@ public class PersonManager extends MarkLogicManager<Person,String> {
         return this.repository.read(id);
     }
 
-    public void test(String id){
-
-       // this.query.
-
-
-    }
-
     public List<Post> getPostsLastMonth(Person p) {
 
         LocalDateTime ldt = this.getDateLastMonth();
@@ -112,6 +105,16 @@ public class PersonManager extends MarkLogicManager<Person,String> {
 
     }
 
+    public List<Person> getPersonInRelationDate(String str){
+
+        QueryManager queryMgr = this.getNewQueryManager();
+        StringQueryDefinition stringQry = queryMgr.newStringDefinition();
+        stringQry.setCriteria(str);
+
+        return this.readAll(stringQry);
+
+    }
+
     public Map<String,Double> getAverageValueBuyAllPersons() throws InterruptedException {
 
         Map<String,Double> map = new HashMap<>();
@@ -131,5 +134,19 @@ public class PersonManager extends MarkLogicManager<Person,String> {
 
     }
 
+
+    public List<Person> getPersonHaveBuyAndPostProduct(long startPeriod, long endPeriod, List<Person> persons, Product p) {
+        return  persons.stream().filter(person -> {
+            return person.getOrders().stream().anyMatch(order -> {
+                long date = order.getOrderDate();
+                return startPeriod <= date && endPeriod >= date &&
+                        order.getLines().stream().anyMatch(line -> line.getAsin().equals(p.getAsin()));
+            }) &&
+                    person.getPosts().stream().anyMatch(post -> {
+                        long date = post.getCreateDate();
+                        return startPeriod <= date && endPeriod >= date && post.getNameProduct() != null && post.getNameProduct().equals(p.getTitle());
+                    });
+        }).collect(Collectors.toList());
+    }
 
 }

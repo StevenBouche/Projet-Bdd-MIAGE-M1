@@ -22,11 +22,37 @@ public class QueryOne {
     private String locationPerson;
     private int placePerson;
 
-    private List<Feedback> lastMonthFeedback = new ArrayList<>();
     private List<Post> lastMonthPosts = new ArrayList<>();
     private List<Order> lastMonthOrders = new ArrayList<>();
     private String mostBuyProductBrand;
     private String mostTagPost;
+
+
+    public String toString(){
+
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("Profile of person : ").append(idPerson).append("\n");
+        builder.append("First name : ").append(firstNamePerson).append("\n");
+        builder.append("Last name : ").append(lastNamePerson).append("\n");
+        builder.append("Gender : ").append(genderPerson).append("\n");
+        builder.append("Birthday : ").append(birthdayPerson).append("\n");
+        builder.append("Location : ").append(locationPerson).append("\n");
+        builder.append("Place : ").append(placePerson).append("\n");
+        builder.append("Most buy product brand : ").append(mostBuyProductBrand).append("\n");
+        builder.append("Most tag ID in posts : ").append(mostTagPost).append("\n");
+
+        builder.append("Posts last month : ").append("\n");
+        for (Post p: lastMonthPosts) builder.append(p.toString());
+
+        builder.append("Orders last month : ").append("\n");
+        for (Order o: lastMonthOrders) builder.append(o.toString());
+
+        return builder.toString();
+
+    }
+
+
 
     public QueryOne(String idPerson){
         this.idPerson = idPerson;
@@ -80,14 +106,6 @@ public class QueryOne {
         this.placePerson = placePerson;
     }
 
-    public List<Feedback> getLastMonthFeedback() {
-        return lastMonthFeedback;
-    }
-
-    public void setLastMonthFeedback(List<Feedback> lastMonthFeedback) {
-        this.lastMonthFeedback = lastMonthFeedback;
-    }
-
     public String getMostBuyProductBrand() {
         return mostBuyProductBrand;
     }
@@ -127,4 +145,7 @@ public class QueryOne {
     public void setLastMonthOrders(List<Order> lastMonthOrders) {
         this.lastMonthOrders = lastMonthOrders;
     }
+
+
+
 }

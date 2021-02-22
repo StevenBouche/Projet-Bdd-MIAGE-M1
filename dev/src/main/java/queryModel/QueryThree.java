@@ -1,9 +1,11 @@
 package queryModel;
 
+import models.Feedback;
 import models.Person;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /*
 
@@ -14,13 +16,13 @@ For a given product during a given period, find people who have undertaken activ
  */
 public class QueryThree {
 
-    private String idProduct;
-    private String asinProduct;
-    private long startPeriod;
-    private long finishPeriod;
+    public String asinProduct;
 
-    private List<Person> personWhoInteractWithProduct = new ArrayList<>();
-    private List<String> sentencesNegative = new ArrayList<>();
+    public Map<String,List<Feedback>> map;
 
+    public long startPeriod;
+    public long endPeriod;
+    public String startStr;
+    public String endStr;
 
 }

@@ -1,8 +1,10 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
+import models.Feedback;
 import models.LinkPerson;
 import models.Person;
 import models.Vendor;
 import org.json.simple.parser.ParseException;
+import parserManager.FeedbackParserManager;
 import parserManager.KnowPersonsParserManager;
 import parserManager.PersonParserManager;
 import parserManager.VendorParserManager;
@@ -34,12 +36,17 @@ public class ExportData {
             VendorParserManager vendorManager = new VendorParserManager();
             List<Vendor> vendors = vendorManager.getVendors();
 
-          /*  KnowPersonsParserManager linkPerson = new KnowPersonsParserManager();
-            //List<LinkPerson> links = linkPerson.getLinks();*/
+            KnowPersonsParserManager linkPerson = new KnowPersonsParserManager();
+            List<LinkPerson> links = linkPerson.getLinksPerson();
+
+            FeedbackParserManager f = new FeedbackParserManager();
+            List<Feedback> feedback = f.getFeedback();
 
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writeValue(new File(path+"\\persons.json"), persons);
             objectMapper.writeValue(new File(path+"\\vendors.json"), vendors);
+            objectMapper.writeValue(new File(path+"\\links.json"), links);
+            objectMapper.writeValue(new File(path+"\\feedback.json"), feedback);
 
         }
 

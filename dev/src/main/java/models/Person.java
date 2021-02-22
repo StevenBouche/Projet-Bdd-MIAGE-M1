@@ -25,6 +25,24 @@ public class Person {
 
     }
 
+    public String toString(){
+
+        StringBuilder builder = new StringBuilder();
+
+        builder.append("Profile of person : ").append(id).append("\n");
+        builder.append("First name : ").append(firstName).append("\n");
+        builder.append("Last name : ").append(lastName).append("\n");
+        builder.append("Gender : ").append(gender).append("\n");
+        builder.append("Birthday : ").append(birthday).append("\n");
+        builder.append("Create date : ").append(createDateStr).append("\n");
+        builder.append("Location : ").append(location).append("\n");
+        builder.append("Place : ").append(place).append("\n");
+
+
+        return builder.toString();
+
+    }
+
     @Id
     public String getId() {
         return id;

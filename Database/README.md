@@ -12,6 +12,7 @@ http://localhost:8001<br>
 Username = Admin<br>
 Password = Admin<br>
 
+## Activation API java
 
 curl --anyauth --user Admin:Admin -i -X POST \
     -d'{"rest-api":{"name":"ProjectBDD"}}' \

@@ -2,10 +2,8 @@ package service;
 
 import dal.MarkLogicUtility;
 import models.LinkPerson;
-import org.w3c.dom.Node;
 import viewModel.NodePerson;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

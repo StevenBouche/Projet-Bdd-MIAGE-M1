@@ -28,6 +28,7 @@ public class FeedbackParser extends Parser<List<String[]>,Feedback> {
             size = strs[2].length();
             feed.setComment(strs[2].substring(5,size));
             i++;
+            feed.setId(String.valueOf(i));
             feeds.add(feed);
         }
 

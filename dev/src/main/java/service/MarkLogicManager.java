@@ -1,5 +1,6 @@
 package service;
 
+import com.marklogic.client.ResourceNotFoundException;
 import com.marklogic.client.io.SearchHandle;
 import com.marklogic.client.pojo.PojoPage;
 import com.marklogic.client.pojo.PojoQueryBuilder;
@@ -25,9 +26,9 @@ import java.util.concurrent.Future;
 
 public abstract class MarkLogicManager<T,K extends Serializable> {
 
-    protected MarkLogicUtility utility;
-    protected PojoRepository<T,K> repository;
-    protected PojoQueryBuilder<T> query;
+    public MarkLogicUtility utility;
+    public PojoRepository<T,K> repository;
+    public PojoQueryBuilder<T> query;
 
     public MarkLogicManager(MarkLogicUtility utility, Class<T> classT, Class<K> classK){
         this.utility = utility;
@@ -44,7 +45,37 @@ public abstract class MarkLogicManager<T,K extends Serializable> {
         return this.utility.client.newQueryManager();
     }
 
-    protected T readFirstOne(PojoQueryDefinition query){
+
+    public void insertOne(T element){
+        this.repository.write(element);
+    }
+
+    public void insertAll(List<T> elements) throws InterruptedException {
+        Thread t = this.utility.writeDataInRepository(this.repository,elements);
+        t.join();
+    }
+
+    public void updateOne(T element){
+        this.repository.write(element);
+    }
+
+    public void UpdateAll(List<T> elements) throws InterruptedException {
+        Thread t = this.utility.writeDataInRepository(this.repository,elements);
+        t.join();
+    }
+
+    public T readFirstOne(K id){
+
+        try{
+            return this.repository.read(id);
+        }
+        catch(ResourceNotFoundException e){
+            return null;
+        }
+
+    }
+
+    public T readFirstOne(PojoQueryDefinition query){
 
         PojoPage<T> element = this.repository.search(query,1);
 
@@ -53,7 +84,13 @@ public abstract class MarkLogicManager<T,K extends Serializable> {
         return null;
     }
 
-    protected List<T> readAll(PojoQueryDefinition query){
+    public List<T> readMany(K... ids){
+
+
+        return null;
+    }
+
+    public List<T> readAll(PojoQueryDefinition query){
 
         List<T> persons = new ArrayList<>();
         int startIndex = 1;
@@ -74,7 +111,7 @@ public abstract class MarkLogicManager<T,K extends Serializable> {
         return persons;
     }
 
-    protected List<T> readAll() throws InterruptedException {
+    public List<T> readAll() throws InterruptedException {
 
         List<T> elements = new ArrayList<>();
         int startIndex = 1;
@@ -98,6 +135,20 @@ public abstract class MarkLogicManager<T,K extends Serializable> {
         return elements;
 
     }
+
+    public void deleteOne(K id){
+        this.repository.delete(id);
+    }
+
+    public void deleteMany(K... ids){
+        this.repository.delete(ids);
+    }
+
+    public void deleteAll(){
+        this.repository.deleteAll();
+    }
+
+
 
     protected void executeTasks(List<Thread> threads) throws InterruptedException {
 

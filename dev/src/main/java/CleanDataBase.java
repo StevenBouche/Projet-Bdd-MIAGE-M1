@@ -1,26 +1,26 @@
 import com.marklogic.client.pojo.PojoRepository;
 import dal.MarkLogicUtility;
+import models.Feedback;
 import models.Person;
 import models.Vendor;
 import org.json.simple.parser.ParseException;
+import service.*;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class CleanDataBase {
 
-    public static void main(String[] args) throws IOException, URISyntaxException, ParseException, InterruptedException {
+    static ManagersMarkLogic managers = new ManagersMarkLogic();
 
-        MarkLogicUtility utility = new MarkLogicUtility("localhost", 8003, "Admin", "Admin");
+    public static void main(String[] args) {
 
-        PojoRepository<Person, String> personRepo = utility.createPojoRepository(Person.class, String.class);
-        PojoRepository<Vendor, String> vendorRepo = utility.createPojoRepository(Vendor.class, String.class);
+        managers.feedbackManager.deleteAll();
+        managers.linkManager.deleteAll();
+        managers.vendorManager.deleteAll();
+        managers.personManager.deleteAll();
 
-        System.out.println("Delete all repository marklogic.");
-        personRepo.deleteAll();
-        vendorRepo.deleteAll();
-
-        utility.releaseConnection();
+        managers.release();
 
     }
 
